@@ -1,0 +1,110 @@
+[
+    {
+        "id": 1,  
+        "userId": 1, 
+        "course": "Web Development Mastery", 
+        "amount": 4999, 
+        "date": "2025-01-10", 
+        "method": "UPI", 
+        "status": "paid" 
+    },
+    {
+        "id": 2,  
+        "userId": 1, 
+        "course": "Data Science Fundamentals", 
+        "amount": 5499, 
+        "date": "2025-01-28", 
+        "method": "Credit Card", 
+        "status": "paid" 
+    },
+    {
+        "id": 3,  
+        "userId": 2, 
+        "course": "Mobile App Development", 
+        "amount": 4799, 
+        "date": "2025-02-05", 
+        "method": "Debit Card", 
+        "status": "paid" 
+    },
+    {
+        "id": 4,  
+        "userId": 2, 
+        "course": "Cloud Computing AWS", 
+        "amount": 5999, 
+        "date": "2025-02-12", 
+        "method": "Net Banking", 
+        "status": "pending" 
+    },
+    {
+        "id": 5,  
+        "userId": 2, 
+        "course": "UI/UX Design Pro", 
+        "amount": 3999, 
+        "date": "2025-02-18", 
+        "method": "UPI", 
+        "status": "paid" 
+    },
+    {
+        "id": 6,  
+        "userId": 1, 
+        "course": "Python Programming", 
+        "amount": 3499, 
+        "date": "2025-02-22", 
+        "method": "Credit Card", 
+        "status": "paid" 
+    },
+    {
+        "id": 7,  
+        "userId": 1, 
+        "course": "Machine Learning Advanced", 
+        "amount": 6999, 
+        "date": "2025-03-01", 
+        "method": "UPI", 
+        "status": "paid" 
+    },
+    {
+        "id": 8,  
+        "userId": 3, 
+        "course": "DevOps Engineering", 
+        "amount": 5499, 
+        "date": "2025-03-08", 
+        "method": "Debit Card", 
+        "status": "pending" 
+    },
+    {
+        "id": 9,  
+        "userId": 3, 
+        "course": "Blockchain Development", 
+        "amount": 7999, 
+        "date": "2025-03-15", 
+        "method": "Net Banking", 
+        "status": "paid" 
+    },
+    {
+        "id": 10, 
+        "userId": 3, 
+        "course": "Cybersecurity Basics", 
+        "amount": 4499, 
+        "date": "2025-03-20", 
+        "method": "UPI", 
+        "status": "paid" 
+    },
+    {
+        "id": 11, 
+        "userId": 1, 
+        "course": "Digital Marketing", 
+        "amount": 2999, 
+        "date": "2025-03-25", 
+        "method": "Credit Card", 
+        "status": "paid" 
+    },
+    {
+        "id": 12, 
+        "userId": 1, 
+        "course": "Game Development Unity", 
+        "amount": 5999, 
+        "date": "2025-04-01", 
+        "method": "UPI", 
+        "status": "pending"
+     }
+]
