@@ -48,8 +48,10 @@ export default function AuthLogin() {
 
     const user = authService.login(userData.username, userData.password);
 
-    if(user){
-      navigate('/')
+    if(user?.role === 'student'){
+      navigate('/student/home')
+    }else if(user?.role === 'admin'){
+      navigate('admin/home')
     }
   }
 

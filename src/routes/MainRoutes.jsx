@@ -8,7 +8,7 @@ import CourseCardDemo from '../ui-component/course/CourseCardDemo';
 import DataTableDemo from '../ui-component/receipt/DatatableDemo';
 
 // dashboard routing
-const DashboardDefault = Loadable(lazy(() => import('views/dashboard/Default')));
+const StudentDashboard = Loadable(lazy(() => import('views/dashboard/student')));
 const BatchListDemo = Loadable(lazy(() => import('ui-component/Batch/BatchCardDemo')))
 const CertificateDemo = Loadable(lazy(() => import('ui-component/certis/CertificateCardDemo')));
 const AdminStudentManagement = Loadable(lazy(() => import('ui-component/students/studentList')));
@@ -24,18 +24,47 @@ const MainRoutes = {
 ),
   children: [
     {
-      path: '/',
-      element: <DashboardDefault />
+      path: 'student/dashboard',
+      element: (
+        <ProtectedRoute role='student'>
+          <StudentDashboard />
+        </ProtectedRoute>
+      )
     },
     {
-      path: 'home',
+      path: 'student/home',
       children: [
         {
           path: '',
-          element: <DashboardDefault />
+          element: (
+            <ProtectedRoute role='student'>
+              <StudentDashboard />
+            </ProtectedRoute>
+          )
         }
       ]
     },
+    {
+      path: 'admin/dashboard',
+      element: (
+        <ProtectedRoute role='admin'>
+          <StudentDashboard />
+        </ProtectedRoute>
+      )
+    },
+    {
+      path: 'admin/home',
+      children: [
+        {
+          path: '',
+          element: (
+            <ProtectedRoute role='admin'>
+              <StudentDashboard />
+            </ProtectedRoute>
+          )
+        }
+      ]
+    },    
     {
       path: '/batches',
       element: (

@@ -13,6 +13,7 @@ import Box from '@mui/material/Box';
 // project imports
 import MainCard from 'ui-component/cards/MainCard';
 import TotalIncomeCard from 'ui-component/cards/Skeleton/TotalIncomeCard';
+import { IconSchool } from '@tabler/icons-react';
 
 // styles
 const CardWrapper = styled(MainCard)(({ theme }) => ({
@@ -40,7 +41,7 @@ const CardWrapper = styled(MainCard)(({ theme }) => ({
   }
 }));
 
-export default function TotalIncomeLightCard({ isLoading, total, icon, label }) {
+export default function TotalIncomeLightCard({ isLoading, bgcolor = 'warning.light', color = 'warning.dark', total, icon, label }) {
   const theme = useTheme();
 
   return (
@@ -58,8 +59,8 @@ export default function TotalIncomeLightCard({ isLoading, total, icon, label }) 
                     sx={{
                       ...theme.typography.commonAvatar,
                       ...theme.typography.largeAvatar,
-                      bgcolor: label === 'Meeting attends' ? alpha(theme.palette.error.light, 0.25) : 'warning.light',
-                      color: label === 'Meeting attends' ? 'error.dark' : 'warning.dark'
+                      bgcolor: bgcolor,
+                      color: color
                     }}
                   >
                     {icon}
@@ -67,7 +68,7 @@ export default function TotalIncomeLightCard({ isLoading, total, icon, label }) 
                 </ListItemAvatar>
                 <ListItemText
                   sx={{ py: 0, mt: 0.45, mb: 0.45 }}
-                  primary={<Typography variant="h4">${total}k</Typography>}
+                  primary={<Typography variant="h4">{total}</Typography>}
                   secondary={
                     <Typography variant="subtitle2" sx={{ color: 'grey.500', mt: 0.5 }}>
                       {label}
