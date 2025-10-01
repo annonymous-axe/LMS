@@ -69,7 +69,7 @@ const MainRoutes = {
       )
     },
     {
-      path: '/students',
+      path: '/admin/students',
       element: (
         <ProtectedRoute role='admin'>
           <AdminStudentManagement />
@@ -77,7 +77,7 @@ const MainRoutes = {
       )
     },
     {
-      path: '/invoices',
+      path: '/admin/invoices',
       element: (
         <ProtectedRoute role='admin'>
           <InvoiceManagement />

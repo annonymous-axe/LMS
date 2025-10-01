@@ -10,14 +10,7 @@ const dashboard = {
   id: 'dashboard',
   type: 'group',
   children: [
-    {
-      id: 'default',
-      title: 'Dashboard',
-      type: 'item',
-      url: '/home',
-      icon: icons.IconDashboard,
-      breadcrumbs: false
-    }
+
   ]
 };
 
