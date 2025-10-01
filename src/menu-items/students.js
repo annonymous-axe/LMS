@@ -34,15 +34,19 @@ const students = {
                     id: 'batches',
                     title: 'Batches',
                     type: 'item',
-                    url: '/batches',
-                    icon: icons.IconVocabulary
+                    url: '/batches'
                 },
                 {
                     id: 'courses',
                     title: 'Courses',
                     type: 'item',
-                    url: '/courses',
-                    icon: icons.IconBrandTabler
+                    url: '/courses'
+                },
+                {
+                    id: 'assignments',
+                    title: 'Assignments',
+                    type: 'item',
+                    url: '/assignments'
                 },
             ] 
         },           
@@ -56,15 +60,13 @@ const students = {
                     id: 'batches',
                     title: 'Batches',
                     type: 'item',
-                    url: '/batches',
-                    icon: icons.IconVocabulary
+                    url: '/batches'
                 },
                 {
                     id: 'courses',
                     title: 'Courses',
                     type: 'item',
-                    url: '/courses',
-                    icon: icons.IconBrandTabler
+                    url: '/courses'
                 },
             ] 
         },
@@ -78,15 +80,13 @@ const students = {
                     id: 'receipt',
                     title: 'Fee Receipt',
                     type: 'item',
-                    url: '/receipts',
-                    icon: icons.IconReceipt
+                    url: '/receipts'
                 },
                 {
                     id: 'certificate',
                     title: 'Certificate',
                     type: 'item',
-                    url: '/certificates',
-                    icon: icons.IconCertificate
+                    url: '/certificates'
                 }
             ] 
         }
