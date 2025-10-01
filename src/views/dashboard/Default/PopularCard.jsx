@@ -47,7 +47,7 @@ export default function PopularCard({ isLoading }) {
               <Grid size={12}>
                 <Grid container sx={{ alignContent: 'center', justifyContent: 'space-between' }}>
                   <Grid>
-                    <Typography variant="h4">Popular Stocks</Typography>
+                    <Typography variant="h4">Top Performing Courses</Typography>
                   </Grid>
                   <Grid>
                     <IconButton size="small" sx={{ mt: -0.625 }}>
@@ -75,23 +75,23 @@ export default function PopularCard({ isLoading }) {
                   </Grid>
                 </Grid>
               </Grid>
-              <Grid size={12} sx={{ mt: -1 }}>
+              {/* <Grid size={12} sx={{ mt: -1 }}>
                 <BajajAreaChartCard />
-              </Grid>
+              </Grid> */}
               <Grid size={12}>
                 <Grid container direction="column">
                   <Grid>
                     <Grid container sx={{ alignItems: 'center', justifyContent: 'space-between' }}>
                       <Grid>
                         <Typography variant="subtitle1" color="inherit">
-                          Bajaj Finery
+                          Frontend with React JS
                         </Typography>
                       </Grid>
                       <Grid>
                         <Grid container sx={{ alignItems: 'center', justifyContent: 'space-between' }}>
                           <Grid>
                             <Typography variant="subtitle1" color="inherit">
-                              $1839.00
+                              ₹499
                             </Typography>
                           </Grid>
                           <Grid>
@@ -115,7 +115,7 @@ export default function PopularCard({ isLoading }) {
                   </Grid>
                   <Grid>
                     <Typography variant="subtitle2" sx={{ color: 'success.dark' }}>
-                      10% Profit
+                      38 Students Enrolled
                     </Typography>
                   </Grid>
                 </Grid>
@@ -125,14 +125,14 @@ export default function PopularCard({ isLoading }) {
                     <Grid container sx={{ alignItems: 'center', justifyContent: 'space-between' }}>
                       <Grid>
                         <Typography variant="subtitle1" color="inherit">
-                          TTML
+                          AI/ML with Python
                         </Typography>
                       </Grid>
                       <Grid>
                         <Grid container sx={{ alignItems: 'center', justifyContent: 'space-between' }}>
                           <Grid>
                             <Typography variant="subtitle1" color="inherit">
-                              $100.00
+                              ₹1599
                             </Typography>
                           </Grid>
                           <Grid>
@@ -156,7 +156,7 @@ export default function PopularCard({ isLoading }) {
                   </Grid>
                   <Grid>
                     <Typography variant="subtitle2" sx={{ color: 'orange.dark' }}>
-                      10% loss
+                      35 Students Enrolled
                     </Typography>
                   </Grid>
                 </Grid>
@@ -166,14 +166,14 @@ export default function PopularCard({ isLoading }) {
                     <Grid container sx={{ alignItems: 'center', justifyContent: 'space-between' }}>
                       <Grid>
                         <Typography variant="subtitle1" color="inherit">
-                          Reliance
+                          Node JS Proper Guide
                         </Typography>
                       </Grid>
                       <Grid>
                         <Grid container sx={{ alignItems: 'center', justifyContent: 'space-between' }}>
                           <Grid>
                             <Typography variant="subtitle1" color="inherit">
-                              $200.00
+                              ₹20000
                             </Typography>
                           </Grid>
                           <Grid>
@@ -197,7 +197,7 @@ export default function PopularCard({ isLoading }) {
                   </Grid>
                   <Grid>
                     <Typography variant="subtitle2" sx={{ color: 'success.dark' }}>
-                      10% Profit
+                      29 Students Enrolled
                     </Typography>
                   </Grid>
                 </Grid>
@@ -207,14 +207,14 @@ export default function PopularCard({ isLoading }) {
                     <Grid container sx={{ alignItems: 'center', justifyContent: 'space-between' }}>
                       <Grid>
                         <Typography variant="subtitle1" color="inherit">
-                          TTML
+                          Spring Boot full Guide
                         </Typography>
                       </Grid>
                       <Grid>
                         <Grid container sx={{ alignItems: 'center', justifyContent: 'space-between' }}>
                           <Grid>
                             <Typography variant="subtitle1" color="inherit">
-                              $189.00
+                              ₹18900
                             </Typography>
                           </Grid>
                           <Grid>
@@ -238,7 +238,7 @@ export default function PopularCard({ isLoading }) {
                   </Grid>
                   <Grid>
                     <Typography variant="subtitle2" sx={{ color: 'orange.dark' }}>
-                      10% loss
+                      26 Students Enrolled
                     </Typography>
                   </Grid>
                 </Grid>
@@ -248,14 +248,14 @@ export default function PopularCard({ isLoading }) {
                     <Grid container sx={{ alignItems: 'center', justifyContent: 'space-between' }}>
                       <Grid>
                         <Typography variant="subtitle1" color="inherit">
-                          Stolon
+                          Core Java
                         </Typography>
                       </Grid>
                       <Grid>
                         <Grid container sx={{ alignItems: 'center', justifyContent: 'space-between' }}>
                           <Grid>
                             <Typography variant="subtitle1" color="inherit">
-                              $189.00
+                              ₹800
                             </Typography>
                           </Grid>
                           <Grid>
@@ -279,7 +279,7 @@ export default function PopularCard({ isLoading }) {
                   </Grid>
                   <Grid>
                     <Typography variant="subtitle2" sx={{ color: 'orange.dark' }}>
-                      10% loss
+                      15 Students Enrolled
                     </Typography>
                   </Grid>
                 </Grid>

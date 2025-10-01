@@ -9,6 +9,7 @@ import DataTableDemo from '../ui-component/receipt/DatatableDemo';
 
 // dashboard routing
 const StudentDashboard = Loadable(lazy(() => import('views/dashboard/student')));
+const AdminDashboard = Loadable(lazy(() => import('views/dashboard/Default')));
 const BatchListDemo = Loadable(lazy(() => import('ui-component/Batch/BatchCardDemo')))
 const CertificateDemo = Loadable(lazy(() => import('ui-component/certis/CertificateCardDemo')));
 const AdminStudentManagement = Loadable(lazy(() => import('ui-component/students/studentList')));
@@ -48,7 +49,7 @@ const MainRoutes = {
       path: 'admin/dashboard',
       element: (
         <ProtectedRoute role='admin'>
-          <StudentDashboard />
+          <AdminDashboard />
         </ProtectedRoute>
       )
     },
@@ -59,7 +60,7 @@ const MainRoutes = {
           path: '',
           element: (
             <ProtectedRoute role='admin'>
-              <StudentDashboard />
+              <AdminDashboard />
             </ProtectedRoute>
           )
         }

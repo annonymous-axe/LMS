@@ -12,8 +12,6 @@ import Box from '@mui/material/Box';
 import MainCard from 'ui-component/cards/MainCard';
 import SkeletonEarningCard from 'ui-component/cards/Skeleton/EarningCard';
 
-import { IconSchool } from '@tabler/icons-react';
-
 export default function PrimaryCard({ isLoading, total, label, icon, bgcolor='secondary.dark', background }) {
   const theme = useTheme();
 

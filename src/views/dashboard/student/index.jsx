@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 import Grid from '@mui/material/Grid2';
 
 // project imports
-import PrimaryCard from './EarningCard';
+import PrimaryCard from './PrimaryCard';
 import TotalIncomeDarkCard from '../../../ui-component/cards/TotalIncomeDarkCard';
 import TotalIncomeLightCard from '../../../ui-component/cards/TotalIncomeLightCard';
 

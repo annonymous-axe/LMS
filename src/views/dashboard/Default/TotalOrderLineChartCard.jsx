@@ -115,11 +115,7 @@ export default function TotalOrderLineChartCard({ isLoading }) {
                   <Grid size={6}>
                     <Grid container sx={{ alignItems: 'center' }}>
                       <Grid>
-                        {timeValue ? (
-                          <Typography sx={{ fontSize: '2.125rem', fontWeight: 500, mr: 1, mt: 1.75, mb: 0.75 }}>$108</Typography>
-                        ) : (
-                          <Typography sx={{ fontSize: '2.125rem', fontWeight: 500, mr: 1, mt: 1.75, mb: 0.75 }}>$961</Typography>
-                        )}
+                        <Typography sx={{ fontSize: '2.125rem', fontWeight: 500, mr: 1, mt: 1.75, mb: 0.75 }}>10</Typography>
                       </Grid>
                       <Grid>
                         <Avatar
@@ -141,7 +137,7 @@ export default function TotalOrderLineChartCard({ isLoading }) {
                             color: 'primary.200'
                           }}
                         >
-                          Total Order
+                          Total Batches
                         </Typography>
                       </Grid>
                     </Grid>

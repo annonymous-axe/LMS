@@ -95,7 +95,7 @@ export default function TotalGrowthBarChart({ isLoading }) {
                       <Typography variant="subtitle2">Total Growth</Typography>
                     </Grid>
                     <Grid>
-                      <Typography variant="h3">$2,324.00</Typography>
+                      <Typography variant="h3">₹2,324.00</Typography>
                     </Grid>
                   </Grid>
                 </Grid>

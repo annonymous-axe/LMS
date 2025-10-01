@@ -51,7 +51,7 @@ export default function AuthLogin() {
     if(user?.role === 'student'){
       navigate('/student/home')
     }else if(user?.role === 'admin'){
-      navigate('admin/home')
+      navigate('/admin/home')
     }
   }
 
