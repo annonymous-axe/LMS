@@ -7,11 +7,12 @@ import {
   IconVocabulary, 
   IconBrandTabler,
   IconAdjustments,
-  IconReceiptRupee
+  IconReceiptRupee,
+  IconWriting
 } from '@tabler/icons-react';
 
 // constant
-const icons = { IconReceiptRupee, IconAddressBook, IconDashboard, IconHelp, IconBrandAppgallery, IconVocabulary, IconBrandTabler, IconAdjustments };
+const icons = { IconWriting, IconReceiptRupee, IconAddressBook, IconDashboard, IconHelp, IconBrandAppgallery, IconVocabulary, IconBrandTabler, IconAdjustments };
 
 // ==============================|| SAMPLE PAGE & DOCUMENTATION MENU ITEMS ||============================== //
 
@@ -70,7 +71,31 @@ const admin = {
             breadcrumbs: false
           } 
         ] 
-    },     
+    },
+    {
+        id: 'manage',
+        title: 'Manage',
+        icon: icons.IconWriting,
+        type: 'collapse',
+        children: [
+          {
+            id: 'assignment',
+            title: 'Assingments',
+            type: 'item',
+            url: '/admin/assignment',
+            role: 'admin',
+            breadcrumbs: false
+          },
+          {
+            id: 'payment',
+            title: 'Live Tests',
+            type: 'item',
+            url: '/admin/tests',
+            role: 'admin',
+            breadcrumbs: false
+          } 
+        ] 
+    },    
     {
         id: 'setting',
         title: 'Settings',
