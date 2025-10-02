@@ -9,11 +9,12 @@ import DataTableDemo from '../ui-component/receipt/DatatableDemo';
 
 // dashboard routing
 const StudentDashboard = Loadable(lazy(() => import('views/dashboard/student')));
-const AdminDashboard = Loadable(lazy(() => import('views/dashboard/Default')));
-const BatchListDemo = Loadable(lazy(() => import('ui-component/Batch/BatchCardDemo')))
+const BatchListDemo = Loadable(lazy(() => import('ui-component/Batch/BatchCardDemo')));
 const CertificateDemo = Loadable(lazy(() => import('ui-component/certis/CertificateCardDemo')));
 const AdminStudentManagement = Loadable(lazy(() => import('ui-component/students/studentList')));
 const InvoiceManagement =  Loadable(lazy(() => import('ui-component/Invoice/InvoiceManagement')));
+
+const AdminDashboard = Loadable(lazy(() => import('views/dashboard/Default')))
 // ==============================|| MAIN ROUTING ||============================== //
 
 const MainRoutes = {
@@ -113,7 +114,16 @@ const MainRoutes = {
           <InvoiceManagement />
         </ProtectedRoute>
       )
-    }
+    },
+
+    {
+      path: '/admin/batches',
+      element: (
+        <ProtectedRoute role='admin'>
+          <BatchListDemo />
+        </ProtectedRoute>
+      )
+    },    
   ]
 };
 

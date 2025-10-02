@@ -19,6 +19,35 @@
     <meta name="author" content="CodedThemes" />
 
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend :{
+            colors : {
+              brand : {
+                light: '#2196F3',
+                DEFAULT: '#2196F3',
+              },
+              primary : {
+                DEFAULT: '#2196F3',
+                light: '#E3F2FD',
+                dark: '#2196F3'
+              },
+              secondary: {
+                DEFAULT: '#673AB7',
+                light: '#EDE7F6',
+                dark: '#673AB7'
+              },
+              warning: {
+                light: '#fff8e1',
+                dark: '#ffe57f'
+              }
+
+            }
+          }
+        }
+      }
+    </script>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>

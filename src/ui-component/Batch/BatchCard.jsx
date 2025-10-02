@@ -112,7 +112,7 @@ export const BatchCard = ({
           </div>
           <div className="w-full bg-gray-200 rounded-full h-2">
             <div 
-              className="bg-gradient-to-r from-blue-500 to-blue-600 h-2 rounded-full transition-all duration-300"
+              className="bg-gradient-to-r from-primary h-2 rounded-full transition-all duration-300"
               style={{ width: `${progress}%` }}
             ></div>
           </div>
@@ -128,7 +128,7 @@ export const BatchCard = ({
           </div>
           <div className="w-full bg-gray-200 rounded-full h-2">
             <div 
-              className="bg-gradient-to-r from-green-500 to-green-600 h-2 rounded-full transition-all duration-300"
+              className="bg-gradient-to-r from-green-500 h-2 rounded-full transition-all duration-300"
               style={{ width: `${(students / maxStudents) * 100}%` }}
             ></div>
           </div>
@@ -137,18 +137,16 @@ export const BatchCard = ({
 
       {/* Action Buttons */}
       <div className="flex gap-3">
-        {onViewDetails && (
-          <button
-            onClick={onViewDetails}
-            className="flex-1 px-4 py-2 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors font-medium"
-          >
-            View Details
-          </button>
-        )}
-        {onEnroll && status === 'upcoming' && (
+        <button
+          onClick={onViewDetails}
+          className="flex-1 px-4 py-2 outline outline-1 outline-warning-dark bg-warning-light text-black rounded-lg hover:bg-warning-dark hover:text-white transition-colors font-medium"
+        >
+          View Details
+        </button>
+        {status === 'upcoming' && (
           <button
             onClick={onEnroll}
-            className="flex-1 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-medium"
+            className="flex-1 px-4 py-2 outline outline-1 outline-primary-dark bg-primary-light text-black rounded-lg hover:bg-primary-dark hover:text-white transition-colors font-medium"
           >
             Enroll Now
           </button>
@@ -156,7 +154,7 @@ export const BatchCard = ({
         {status === 'ongoing' && (
           <button
             onClick={onViewDetails}
-            className="flex-1 px-4 py-2 bg-gradient-to-r from-blue-600 to-blue-700 text-white rounded-lg hover:from-blue-700 hover:to-blue-800 transition-colors font-medium"
+            className="flex-1 px-4 py-2 outline outline-1 outline-primary-dark bg-primary-light text-black rounded-lg hover:bg-primary-dark hover:text-white transition-colors font-medium"
           >
             Continue Learning
           </button>
@@ -194,8 +192,8 @@ export const BatchList = ({
                 onClick={() => setFilter(status)}
                 className={`px-4 py-2 rounded-lg font-medium transition-colors ${
                   filter === status
-                    ? 'bg-blue-600 text-white'
-                    : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                    ? 'bg-brand text-white'
+                    : 'bg-gray-100 text-gray-700 hover:bg-primary-light'
                 }`}
               >
                 {status.charAt(0).toUpperCase() + status.slice(1)}
