@@ -20,7 +20,7 @@ const students = {
             id: 'default',
             title: 'Dashboard',
             type: 'item',
-            url: '/admin/home',
+            url: '/student/home',
             icon: icons.IconDashboard,
             breadcrumbs: false
         },
@@ -47,26 +47,6 @@ const students = {
                     title: 'Assignments',
                     type: 'item',
                     url: '/assignments'
-                },
-            ] 
-        },           
-        {
-            id: 'products',
-            title: 'Products',
-            icon: icons.IconBrandAppgallery,
-            type: 'collapse',
-            children: [
-                {
-                    id: 'batches',
-                    title: 'Batches',
-                    type: 'item',
-                    url: '/batches'
-                },
-                {
-                    id: 'courses',
-                    title: 'Courses',
-                    type: 'item',
-                    url: '/courses'
                 },
             ] 
         },

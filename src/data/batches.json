@@ -11,6 +11,7 @@
         "instructor": "John Doe",
         "schedule": "Mon, Wed, Fri - 6PM",
         "status": "ongoing",
+        "duration": "1 Hour",
         "progress": 65
     },
     {
@@ -24,11 +25,12 @@
         "maxStudents": 40,
         "instructor": "Jane Smith",
         "schedule": "Tue, Thu, Sat - 7PM",
+        "duration": "1 Hour",
         "status": "ongoing",
         "progress": 40
     },
     {
-        "id": 2,
+        "id": 3,
         "userId": 1,
         "name": "Mobile Dev Batch 2025-C",
         "course": "React Native Development",
@@ -37,10 +39,11 @@
         "maxStudents": 50,
         "instructor": "Mike Johnson",
         "schedule": "Mon, Wed, Fri - 8PM",
+        "duration": "1 Hour",
         "status": "upcoming"
     },
     {
-        "id": 1,
+        "id": 4,
         "userId": 1,
         "name": "Cloud Computing Batch 2024-D",
         "course": "AWS Cloud Architecture",
@@ -50,10 +53,11 @@
         "maxStudents": 50,
         "instructor": "Sarah Wilson",
         "schedule": "Tue, Thu - 6PM",
+        "duration": "1 Hour",
         "status": "completed"
     },
     {
-        "id": 2,
+        "id": 5,
         "userId": 1,
         "name": "UI/UX Design Batch 2025-E",
         "course": "Advanced UI/UX Design",
@@ -62,10 +66,11 @@
         "maxStudents": 30,
         "instructor": "Alex Brown",
         "schedule": "Sat, Sun - 10AM",
+        "duration": "2 Hour",
         "status": "upcoming"
     },
     {
-        "id": 2,
+        "id": 6,
         "userId": 1,
         "name": "Python Programming Batch 2025-F",
         "course": "Python for Data Science",
@@ -75,7 +80,94 @@
         "maxStudents": 45,
         "instructor": "David Lee",
         "schedule": "Mon, Wed - 7PM",
+        "duration": "1 Hour",
         "status": "ongoing",
         "progress": 25
-    }
+    },
+
+    {
+        "id": 7,
+        "userId": 0,
+        "name": "Web Development Batch 2025-A",
+        "course": "Full Stack Web Development",
+        "startDate": "2025-01-15",
+        "endDate": "2025-04-15",
+        "students": 45,
+        "maxStudents": 50,
+        "instructor": "John Doe",
+        "schedule": "Mon, Wed, Fri - 6PM",
+        "duration": "1:30 Hour",
+        "status": "ongoing",
+        "progress": 65
+    },
+    {
+        "id": 8,
+        "userId": 0,
+        "name": "Data Science Batch 2025-B",
+        "course": "Data Science & Machine Learning",
+        "startDate": "2025-02-01",
+        "endDate": "2025-05-01",
+        "students": 38,
+        "maxStudents": 40,
+        "instructor": "Jane Smith",
+        "schedule": "Tue, Thu, Sat - 7PM",
+        "duration": "1 Hour",
+        "status": "ongoing",
+        "progress": 40
+    },
+    {
+        "id": 9,
+        "userId": 0,
+        "name": "Mobile Dev Batch 2025-C",
+        "course": "React Native Development",
+        "startDate": "2025-10-01",
+        "students": 12,
+        "maxStudents": 50,
+        "instructor": "Mike Johnson",
+        "schedule": "Mon, Wed, Fri - 8PM",
+        "duration": "1:30 Hour",
+        "status": "upcoming"
+    },
+    {
+        "id": 10,
+        "userId": 0,
+        "name": "Cloud Computing Batch 2024-D",
+        "course": "AWS Cloud Architecture",
+        "startDate": "2024-10-01",
+        "endDate": "2024-12-31",
+        "students": 50,
+        "maxStudents": 50,
+        "instructor": "Sarah Wilson",
+        "schedule": "Tue, Thu - 6PM",
+        "duration": "2 Hour",
+        "status": "completed"
+    },
+    {
+        "id": 11,
+        "userId": 0,
+        "name": "UI/UX Design Batch 2025-E",
+        "course": "Advanced UI/UX Design",
+        "startDate": "2025-10-15",
+        "students": 8,
+        "maxStudents": 30,
+        "instructor": "Alex Brown",
+        "schedule": "Sat, Sun - 10AM",
+        "duration": "3 Hour",
+        "status": "upcoming"
+    },
+    {
+        "id": 12,
+        "userId": 0,
+        "name": "Python Programming Batch 2025-F",
+        "course": "Python for Data Science",
+        "startDate": "2025-03-01",
+        "endDate": "2025-05-30",
+        "students": 42,
+        "maxStudents": 45,
+        "instructor": "David Lee",
+        "schedule": "Mon, Wed - 7PM",
+        "duration": "2 Hour",
+        "status": "ongoing",
+        "progress": 25
+    }    
 ]

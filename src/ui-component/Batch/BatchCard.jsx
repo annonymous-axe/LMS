@@ -1,5 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Calendar, Users, BookOpen, Clock } from 'lucide-react';
+import { Button } from '@mui/material';
+import OpenBatchDetail from './BatchDetail';
 
 // Batch Card Component - For displaying batch information
 export const BatchCard = ({
@@ -14,8 +16,6 @@ export const BatchCard = ({
   schedule,
   status = 'ongoing', // ongoing, upcoming, completed
   progress,
-  onViewDetails,
-  onEnroll,
   className = ''
 }) => {
   const statusConfig = {
@@ -37,6 +37,8 @@ export const BatchCard = ({
   };
 
   const statusStyle = statusConfig[status] || statusConfig.ongoing;
+
+  const [largeModalOpen, setLargeModalOpen] = useState(false);
 
   return (
     <div className={`bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-all duration-300 ${className}`}>
@@ -136,30 +138,20 @@ export const BatchCard = ({
       )}
 
       {/* Action Buttons */}
-      <div className="flex gap-3">
-        <button
-          onClick={onViewDetails}
-          className="flex-1 px-4 py-2 outline outline-1 outline-warning-dark bg-warning-light text-black rounded-lg hover:bg-warning-dark hover:text-white transition-colors font-medium"
-        >
+      <div className="flex gap-3 flex-row-reverse">
+        <Button variant='outlined' sx={{color: 'primary.main'}} onClick={() => setLargeModalOpen(true)}>
           View Details
-        </button>
+        </Button>        
         {status === 'upcoming' && (
-          <button
-            onClick={onEnroll}
-            className="flex-1 px-4 py-2 outline outline-1 outline-primary-dark bg-primary-light text-black rounded-lg hover:bg-primary-dark hover:text-white transition-colors font-medium"
-          >
-            Enroll Now
-          </button>
+          <Button variant='outlined'>Enroll Now</Button>
         )}
         {status === 'ongoing' && (
-          <button
-            onClick={onViewDetails}
-            className="flex-1 px-4 py-2 outline outline-1 outline-primary-dark bg-primary-light text-black rounded-lg hover:bg-primary-dark hover:text-white transition-colors font-medium"
-          >
-            Continue Learning
-          </button>
-        )}
+          <Button variant='outlined'>Continue Learning</Button>
+        )}        
+
       </div>
+
+      <OpenBatchDetail largeModalOpen={largeModalOpen} setLargeModalOpen={setLargeModalOpen} batchId={id}/>
     </div>
   );
 };
