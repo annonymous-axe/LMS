@@ -20,7 +20,7 @@ const students = {
             id: 'default',
             title: 'Dashboard',
             type: 'item',
-            url: '/home',
+            url: '/admin/home',
             icon: icons.IconDashboard,
             breadcrumbs: false
         },
