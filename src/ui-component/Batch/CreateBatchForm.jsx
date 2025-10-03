@@ -1,6 +1,7 @@
 import { Button, Grid2 as Grid, TextField, Typography } from "@mui/material";
 import { Modal } from "../Modal.jsx";
 import DateField from "../DateField.jsx";
+import TimeField from "../TimeField.jsx";
 
 
 export const CreateBatchForm = ({
@@ -27,7 +28,7 @@ export const CreateBatchForm = ({
       size={size}
       footer={
         <>
-          <Button>
+          <Button onClick={onClose}>
             {cancelText}
           </Button>
           <Button variant="outlined" color="secondary">
@@ -38,6 +39,9 @@ export const CreateBatchForm = ({
     >
       <form id="modal-form" onSubmit={handleSubmit}>
         <Grid container spacing={1}>
+          <Grid size={12}>
+            <Typography color="gray">Batch Meta Data</Typography>
+          </Grid>          
           <Grid size={6}>
             <TextField 
               label='Batch Name'
@@ -49,13 +53,28 @@ export const CreateBatchForm = ({
               label='Course Name'
               fullWidth
             />
-          </Grid>  
+          </Grid>
+          <Grid size={12}>
+            <Typography color="gray">Dates</Typography>
+          </Grid>           
           <Grid size={6}>
             <DateField label='Start Date'/>
           </Grid>
           <Grid size={6}>
             <DateField label='End Date'/>
-          </Grid>                    
+          </Grid>
+          <Grid size={12}>
+            <Typography color="gray">Schedules</Typography>
+          </Grid>
+          <Grid size={12}>
+            <TextField 
+              label='Week Days'
+              fullWidth
+            />
+          </Grid>
+          <Grid size={6}>
+            <TimeField label='Batch Time' />
+          </Grid>
         </Grid>
         
       </form>

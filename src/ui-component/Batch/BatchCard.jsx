@@ -99,12 +99,12 @@ export const BatchCard = ({
       </div>
 
       {/* Instructor */}
-      {instructor && (
+      {/* {instructor && (
         <div className="mb-4 pb-4 border-b border-gray-200">
           <p className="text-xs text-gray-500 mb-1">Instructor</p>
           <p className="text-sm font-medium text-gray-800">{instructor}</p>
         </div>
-      )}
+      )} */}
 
       {/* Progress Bar (for ongoing batches) */}
       {status === 'ongoing' && progress !== undefined && (
@@ -115,7 +115,7 @@ export const BatchCard = ({
           </div>
           <div className="w-full bg-gray-200 rounded-full h-2">
             <div 
-              className="bg-gradient-to-r from-primary h-2 rounded-full transition-all duration-300"
+              className="bg-gradient-to-r from-white to-primary h-2 rounded-full transition-all duration-300"
               style={{ width: `${progress}%` }}
             ></div>
           </div>
@@ -131,7 +131,7 @@ export const BatchCard = ({
           </div>
           <div className="w-full bg-gray-200 rounded-full h-2">
             <div 
-              className="bg-gradient-to-r from-green-500 h-2 rounded-full transition-all duration-300"
+              className="bg-gradient-to-r from-white to-green-500 h-2 rounded-full transition-all duration-300"
               style={{ width: `${(students / maxStudents) * 100}%` }}
             ></div>
           </div>
