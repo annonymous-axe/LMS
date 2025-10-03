@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Calendar, Users, BookOpen, Clock } from 'lucide-react';
 import { Button } from '@mui/material';
 import OpenBatchDetail from './BatchDetail';
+import { CreateBatchForm } from './CreateBatchForm';
 
 // Batch Card Component - For displaying batch information
 export const BatchCard = ({
@@ -152,6 +153,7 @@ export const BatchCard = ({
       </div>
 
       <OpenBatchDetail largeModalOpen={largeModalOpen} setLargeModalOpen={setLargeModalOpen} batchId={id}/>
+
     </div>
   );
 };

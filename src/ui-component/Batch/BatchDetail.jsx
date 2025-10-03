@@ -1,6 +1,7 @@
 import { CheckCircle } from 'lucide-react';
 import { Modal } from '../Modal.jsx';
 import batches from '../../data/batches.json';
+import { Button } from '@mui/material';
 
 export default function OpenBatchDetail({ largeModalOpen, setLargeModalOpen, batchId }){
 
@@ -15,7 +16,7 @@ export default function OpenBatchDetail({ largeModalOpen, setLargeModalOpen, bat
           title="Batch Details"
           size="lg"
         >
-          <div className="space-y-6">
+          <div className="space-y-5">
             <div className="flex gap-6">
               <div className="text-6xl">🎨</div>
               <div className="flex-1">
@@ -48,9 +49,22 @@ export default function OpenBatchDetail({ largeModalOpen, setLargeModalOpen, bat
             </div>
 
             <div className="flex gap-3 pt-4">
-              <button className="flex-1 px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-medium">
-                {batch.status}
-              </button>
+
+                {(batch.status === 'ongoing') &&
+                    <Button className="flex-1 px-6 py-3" color='warning' variant='outlined'>
+                        Join
+                    </Button>
+                }
+                {(batch.status === 'upcoming') &&
+                    <Button className="flex-1 px-6 py-3" color='primary' variant='outlined'>
+                        Enroll Now
+                    </Button>
+                }
+                {(batch.status === 'completed') &&
+                    <Button className="flex-1 px-6 py-3" color='success' variant='outlined'>
+                        Completed
+                    </Button>
+                }                                
               <button 
                 onClick={() => setLargeModalOpen(false)}
                 className="px-6 py-3 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors font-medium"
