@@ -2,6 +2,9 @@ import { Button, Grid2 as Grid, TextField, Typography } from "@mui/material";
 import { Modal } from "../Modal.jsx";
 import DateField from "../DateField.jsx";
 import TimeField from "../TimeField.jsx";
+import batches from "../../data/batches.json";
+import { useAuth } from "../../contexts/AuthContext.jsx";
+import { useState } from "react";
 
 
 export const CreateBatchForm = ({
@@ -12,11 +15,30 @@ export const CreateBatchForm = ({
   children,
   submitText = 'Submit',
   cancelText = 'Cancel',
-  isSubmitting = false,
+  isSubmitting = false,  
   size = 'md'
 }) => {
+
+  const [batchData, setBatchData] = useState({
+      name: '', 
+      course: '',
+      startDate: null, 
+      endDate: null,
+      students: 0,
+      maxStudents: 50,
+      weeks: '',
+      time: null,
+      duration: '',
+      status: 'upcoming',
+      progress: 0
+    });
+
+  const {user} = useAuth();
+
   const handleSubmit = (e) => {
     e.preventDefault();
+    const id = console.log(batches.length) + 1;
+    const userId = user.id;
     onSubmit && onSubmit(e);
   };
 
@@ -31,7 +53,7 @@ export const CreateBatchForm = ({
           <Button onClick={onClose}>
             {cancelText}
           </Button>
-          <Button variant="outlined" color="secondary">
+          <Button variant="outlined" color="secondary" onClick={handleSubmit}>
             {isSubmitting ? 'Submitting...' : submitText}
           </Button>
         </>
@@ -46,22 +68,39 @@ export const CreateBatchForm = ({
             <TextField 
               label='Batch Name'
               fullWidth
+              value={batchData.name}
+              name="name"
+              onChange={(e) => setBatchData({...batchData, name: e.target.value})}
             />
           </Grid>
           <Grid size={6}>
             <TextField 
               label='Course Name'
               fullWidth
+              value={batchData.course}
+              name="course"
+              onChange={(e) => setBatchData({...batchData, course: e.target.value})}
             />
           </Grid>
           <Grid size={12}>
-            <Typography color="gray">Dates</Typography>
+            <Typography 
+              color="gray">Dates</Typography>
           </Grid>           
           <Grid size={6}>
-            <DateField label='Start Date'/>
+            <DateField 
+              label='Start Date'
+              value={batchData.startDate}
+              name="startDate"
+              onChange={(e) => setBatchData({...batchData, startDate: e.target.value})}            
+            />
           </Grid>
           <Grid size={6}>
-            <DateField label='End Date'/>
+            <DateField 
+              label='End Date'
+              value={batchData.endDate}
+              name="endDate"
+              onChange={(e) => setBatchData({...batchData, endDate: e.target.value})}
+            />
           </Grid>
           <Grid size={12}>
             <Typography color="gray">Schedules</Typography>
@@ -70,11 +109,31 @@ export const CreateBatchForm = ({
             <TextField 
               label='Week Days'
               fullWidth
+              value={batchData.weeks}
+              name="weeks"
+              onChange={(e) => setBatchData({...batchData, weeks: e.target.value})}              
             />
           </Grid>
           <Grid size={6}>
-            <TimeField label='Batch Time' />
+            <TimeField 
+              label='Batch Time' 
+              value={batchData.time}
+              name="time"
+              onChange={(e) => setBatchData({...batchData, time: e.target.value})}               
+          />
           </Grid>
+          <Grid size={12}>
+            <Typography color="gray">Batch Duration</Typography>
+          </Grid>
+          <Grid size={6}>
+            <TextField 
+              label='ex. 1:00 Hour'
+              fullWidth
+              value={batchData.duration}
+              name="duration"
+              onChange={(e) => setBatchData({...batchData, duration: e.target.value})}
+            />
+          </Grid>          
         </Grid>
         
       </form>

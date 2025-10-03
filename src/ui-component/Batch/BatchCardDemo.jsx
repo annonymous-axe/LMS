@@ -16,23 +16,17 @@ const BatchListDemo = () => {
   const [showBatchForm, setShowBatchForm] = useState(false);  
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 p-8">
+    <div className="min-h-screen bg-gray-100 p-6">
       {user.role === 'admin' && 
         <div className="flex items-center mb-6">
           <Button variant='outlined' color='primary' onClick={() => setShowBatchForm(true)}>+ Add Batch</Button>
         </div>
-      }
+      }      
       <div className="max-w-7xl mx-auto">
-        
-        {/* Batch List with Filter */}
-        <BatchList 
-          batches={sampleBatches}
-          title="All Batches"
-          showFilter={true}
-        />
+        <BatchList batches={sampleBatches} />
       </div>
 
-      <CreateBatchForm isOpen={showBatchForm} onClose={() => setShowBatchForm(false)}/>
+      <CreateBatchForm isOpen={showBatchForm} onClose={() => setShowBatchForm(false)}/>      
     </div>
   );
 };
