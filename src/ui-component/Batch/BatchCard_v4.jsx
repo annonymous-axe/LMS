@@ -1,7 +1,10 @@
 import React, { useState, useRef } from 'react';
-import { Calendar, Users, BookOpen, Clock, Eye, Play, UserPlus, TrendingUp, GraduationCap, Sparkles, ChevronRight, X, Plus, Save } from 'lucide-react';
-import { CreateBatchModal } from '../Modals/BatchModal';
+import { Calendar, Users, BookOpen, Clock, Eye, Play, UserPlus, TrendingUp, GraduationCap, Sparkles, ChevronRight } from 'lucide-react';
 
+/**
+ * BatchCard Component - Advanced Berry Design
+ * Sophisticated animations, micro-interactions, and layered visual depth
+ */
 export const BatchCard = ({
   id,
   name = 'Batch Name',
@@ -29,7 +32,7 @@ export const BatchCard = ({
       text: 'text-purple-700',
       gradient: 'from-purple-400 via-purple-500 to-purple-600',
       glowColor: 'rgba(139, 92, 246, 0.3)',
-      particleColor: '#a78bfa',
+      particleColor: 'secondary',
       label: 'Ongoing'
     },
     upcoming: {
@@ -39,7 +42,7 @@ export const BatchCard = ({
       text: 'text-blue-700',
       gradient: 'from-blue-400 via-blue-500 to-blue-600',
       glowColor: 'rgba(59, 130, 246, 0.3)',
-      particleColor: '#60a5fa',
+      particleColor: 'primary',
       label: 'Upcoming'
     },
     completed: {
@@ -490,7 +493,7 @@ export const BatchCard = ({
  */
 export const BatchList = ({
   batches = [],
-  title = 'My Batches',
+  title = '',
   emptyMessage = 'No batches available',
   showFilter = true,
   className = ''
@@ -513,7 +516,6 @@ export const BatchList = ({
     <div className={className}>
       <div className="mb-6">
         <h2 className="text-2xl font-semibold text-gray-800 mb-1">{title}</h2>
-        <p className="text-sm text-gray-600">Manage and track all your learning batches</p>
       </div>
 
       {showFilter && (
@@ -540,7 +542,7 @@ export const BatchList = ({
       )}
 
       {filteredBatches.length > 0 ? (
-        <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-5">
+        <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 gap-5">
           {filteredBatches.map((batch, index) => (
             <BatchCard key={batch.id || index} {...batch} />
           ))}
@@ -557,3 +559,82 @@ export const BatchList = ({
     </div>
   );
 };
+
+// Demo Data
+const sampleBatches = [
+  {
+    id: 1,
+    name: 'Web Development Bootcamp',
+    course: 'Full Stack Development',
+    startDate: 'Jan 15, 2024',
+    endDate: 'Apr 15, 2024',
+    students: 28,
+    maxStudents: 30,
+    instructor: 'John Doe',
+    schedule: 'Mon, Wed, Fri - 6 PM',
+    status: 'ongoing',
+    progress: 65
+  },
+  {
+    id: 2,
+    name: 'Data Science Masters',
+    course: 'Data Science & ML',
+    startDate: 'Feb 1, 2024',
+    endDate: 'May 1, 2024',
+    students: 22,
+    maxStudents: 25,
+    instructor: 'Jane Smith',
+    schedule: 'Tue, Thu - 7 PM',
+    status: 'upcoming'
+  },
+  {
+    id: 3,
+    name: 'React Advanced Course',
+    course: 'Frontend Development',
+    startDate: 'Nov 1, 2023',
+    endDate: 'Jan 1, 2024',
+    students: 30,
+    maxStudents: 30,
+    instructor: 'Mike Johnson',
+    schedule: 'Sat, Sun - 10 AM',
+    status: 'completed'
+  },
+  {
+    id: 4,
+    name: 'Python for Beginners',
+    course: 'Programming Fundamentals',
+    startDate: 'Jan 20, 2024',
+    endDate: 'Mar 20, 2024',
+    students: 22,
+    maxStudents: 25,
+    instructor: 'Sarah Williams',
+    schedule: 'Mon, Wed - 5 PM',
+    status: 'ongoing',
+    progress: 45
+  },
+  {
+    id: 5,
+    name: 'UI/UX Design Workshop',
+    course: 'Design Principles',
+    startDate: 'Feb 10, 2024',
+    endDate: 'Apr 10, 2024',
+    students: 18,
+    maxStudents: 20,
+    instructor: 'Emily Davis',
+    schedule: 'Sat - 2 PM',
+    status: 'upcoming'
+  },
+  {
+    id: 6,
+    name: 'Mobile App Development',
+    course: 'React Native',
+    startDate: 'Jan 25, 2024',
+    endDate: 'Apr 25, 2024',
+    students: 16,
+    maxStudents: 20,
+    instructor: 'David Brown',
+    schedule: 'Tue, Thu - 6 PM',
+    status: 'ongoing',
+    progress: 32
+  }
+];

@@ -16,6 +16,10 @@ import useMenu from '../../../menu-items';
 function MenuList() {
 
   const menuItems = useMenu();
+
+  if (!menuItems || !menuItems.items) {
+    return <Typography align="center" color='black'>Loading menu...</Typography>;
+  }  
   
   const { menuMaster } = useGetMenuMaster();
   const drawerOpen = menuMaster.isDashboardDrawerOpened;
@@ -28,10 +32,10 @@ function MenuList() {
   let remItems = [];
   let lastItemId;
 
-  if (lastItem && lastItem < menuItems.items.length) {
+  if (lastItem && lastItem < menuItems.items?.length) {
     lastItemId = menuItems.items[lastItem - 1].id;
     lastItemIndex = lastItem - 1;
-    remItems = menuItems.items.slice(lastItem - 1, menuItems.items.length).map((item) => ({
+    remItems = menuItems.items.slice(lastItem - 1, menuItems?.items?.length).map((item) => ({
       title: item.title,
       elements: item.children,
       icon: item.icon,
